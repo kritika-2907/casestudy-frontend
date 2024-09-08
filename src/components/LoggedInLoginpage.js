@@ -4,14 +4,30 @@ import { Link } from 'react-router-dom';
 import '../App.css'; // Import your CSS file
 
 function LoggedInLandingPage() {
+  const headerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between', // Space between the logo and buttons
+    alignItems: 'center', // Align items vertically in the center
+    padding: '10px 20px', // Adjust padding for spacing
+  };
+
+  const buttonGroupStyle = {
+    display: 'flex',
+    gap: '10px', // Space between buttons
+  };
+
   return (
     <div className="container">
-      <header>
+      <header style={headerStyle}>
         <div className="logo">TELSTAR</div>
-        <nav>
+        <nav style={buttonGroupStyle}>
           {/* Navigation for logged-in user */}
           <Link to="/profile">
             <button>Profile</button>
+          </Link>
+          {/* New Bill History button */}
+          <Link to="/bill-history">
+            <button>Bill History</button>
           </Link>
           <Link to="/logout">
             <button>Log Out</button>

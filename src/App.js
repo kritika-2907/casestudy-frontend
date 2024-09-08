@@ -12,6 +12,7 @@ import Invoice from './components/Invoice';
 import PaymentGateway from './components/Paymentgateway';
 import LoggedInLandingPage from './components/LoggedInLoginpage';
 import LoggedOutPage from './components/LoggedOut';
+import BillHistory from './components/BillHistory';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/payment-gateway" element={<PaymentGateway/>}/>
         <Route path="/loggedinloginpage" element={<LoggedInLandingPage/>}/>
         <Route path="/logout" element={<LoggedOutPage/>}/>
+        <Route path="/bill-history" element={<BillHistory/>}/>
       </Routes>
     </Router>
   );
